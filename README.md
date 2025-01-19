@@ -106,24 +106,7 @@ Feel free to check out my other projects and resources:
 
 If you have questions, feedback, or script ideas, feel free to reach out:
 - **GitHub Issues**: [Open an issue](https://github.com/T-Maharshi-Sanand-Yadav/scripts/issues)
-- **Email**: [Add your email here if you want]
+- **Email**: []
 
 Thank you for visiting this repository!
 ```
-
----
-
-### How to Add This to Your Repository:
-1. Create a `README.md` file in the root of your repository:
-   ```bash
-   touch README.md
-   ```
-2. Open the file in your editor and paste the content above.
-3. Commit and push the changes:
-   ```bash
-   git add README.md
-   git commit -m "Add detailed README.md"
-   git push origin main
-   ```
-
-This will give your repository a professional and user-friendly introduction. Let me know if you'd like to customize it further!
