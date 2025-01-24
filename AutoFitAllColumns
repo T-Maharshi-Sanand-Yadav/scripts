@@ -1,0 +1,19 @@
+Sub AutoFitAllColumns()
+    Dim ws As Worksheet
+    Dim LastRow As Long
+    Dim LastCol As Long
+    
+    For Each ws In ThisWorkbook.Sheets
+        ' Handling each worksheet
+        With ws
+            ' Determine the last row and column with data
+            LastRow = .Cells(.Rows.Count, 1).End(xlUp).Row
+            LastCol = .Cells(1, .Columns.Count).End(xlToLeft).Column
+            
+            ' AutoFit all columns with data
+            .Range(.Cells(1, 1), .Cells(LastRow, LastCol)).Columns.AutoFit
+            ' Log the sheet name and last formed rows and columns
+            Debug.Print "Adjusted: " & .Name & " LastRow: " & LastRow & " LastCol: " & LastCol
+        End With
+    Next ws
+End Sub
