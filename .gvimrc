@@ -14,3 +14,6 @@ set ic
 nnoremap <F5> :let keyword=input("Enter keyword: ") \| execute ":%s/".keyword."//gn"<CR>
 
 :source ~/.gvimrc
+
+
+Website Link : https://www.tmsytutorials.com/2025/01/gvimrc.html
