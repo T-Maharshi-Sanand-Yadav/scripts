@@ -17,3 +17,7 @@ export PATH
 
 # User specific aliases and functions
 alias l="ls -1"
+alias c="clear"
+alias .="cd ../"
+alias ..="cd ../../"
+
