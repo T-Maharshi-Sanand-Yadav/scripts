@@ -2,7 +2,7 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+	. /etc/bashrc
 fi
 
 # User specific environment
@@ -16,8 +16,5 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-alias l="ls -1"
-alias c="clear"
-alias .="cd ../"
-alias ..="cd ../../"
-
+source ~up_maharshi_699/.aliases
+alias 1="source ~up_maharshi_699/.aliases"
