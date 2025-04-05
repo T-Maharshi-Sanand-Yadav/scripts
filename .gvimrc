@@ -12,6 +12,8 @@ set nu
 set hlsearch
 set ic
 nnoremap <F5> :let keyword=input("Enter keyword: ") \| execute ":%s/".keyword."//gn"<CR>
+set cursorline
+set colorcolumn=80
 
 :source ~/.gvimrc
 
