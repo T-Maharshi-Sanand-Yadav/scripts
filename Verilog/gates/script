@@ -1,0 +1,11 @@
+foreach kk(`cat gates`)
+touch ${kk}_gate_level_modelling.v
+end
+
+foreach kk(`cat gates`)
+touch ${kk}_data_flow_modelling.v
+end
+
+foreach kk(`cat gates`)
+touch ${kk}_behavioural_modelling.v
+end
