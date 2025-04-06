@@ -1,0 +1,12 @@
+cd
+touch g.sh
+gedit g.sh
+
+copy paste these two lines
+echo '#!/bin/bash' > ~/g.sh
+echo 'gedit "$@" &' >> ~/g.sh
+
+Next Give Permission
+chmod +x ~/g.sh
+
+source ~/.cshrc
