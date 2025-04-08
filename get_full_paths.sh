@@ -2,15 +2,15 @@
 
 # Check if at least one argument is provided
 if [ "$#" -eq 0 ]; then
-  echo "Usage: $0 <filename1> <filename2> ..."
+  echo "Usage: $0 <file_or_directory1> <file_or_directory2> ..."
   exit 1
 fi
 
 # Iterate through all provided arguments
-for FILE in "$@"; do
-  if [ -f "$FILE" ]; then
-    echo "Full path of '$FILE': $(realpath "$FILE")"
+for ITEM in "$@"; do
+  if [ -e "$ITEM" ]; then
+    echo "$(realpath "$ITEM")"
   else
-    echo "File not found: $FILE"
+    echo "Not found: $ITEM"
   fi
 done
