@@ -1,7 +1,7 @@
 ====================================================================================================================================
 ### update_area_from_lef.py
 ====================================================================================================================================
-alias update_area "python3 /home/vv2trainee33/scripts/update_area_from_lef.py"
+alias update_area "python3 /home/<server_name>/scripts/update_area_from_lef.py"
 
 example:
 [TMSY@compute-srv1 lib]$ update_area
