@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+exor_gate/exor/schematic exor
+invert/inv/schematic inv
+xnor_gate/xnor/schematic xnor
+$endmodel
+$net
+$endnet
+$param
+$endparam

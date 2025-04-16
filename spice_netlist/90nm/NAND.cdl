@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  nand_gate
+* Top Cell Name: nand
+* View Name:     schematic
+* Netlisted on:  Mar  1 23:56:14 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: nand_gate
+* Cell Name:    nand
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand a b gnd vdd y
+*.PININFO a:I b:I y:O gnd:B vdd:B
+MNM0 y b net22 gnd nmos1v m=1 l=100n w=120n
+MNM1 net22 a gnd gnd nmos1v m=1 l=100n w=120n
+MPM0 y a vdd vdd pmos1v m=1 l=100n w=120n
+MPM1 y b vdd vdd pmos1v m=1 l=100n w=120n
+.ENDS
+

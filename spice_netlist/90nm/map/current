@@ -1,0 +1,18 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "xnor"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/vvtrainee5/netlist/90nm"
+ )
+( model
+( "exor_gate/exor/schematic" "exor" )
+( "invert/inv/schematic" "inv" )
+( "xnor_gate/xnor/schematic" "xnor" )
+ )
+( "xnor" "ihnl/cds2/map" )
+( "exor" "ihnl/cds1/map" )
+( "inv" "ihnl/cds0/map" )
+ )

@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+or_gate/or/schematic or
+inverter/inverter/schematic inverter
+nor_gate/nor/schematic nor
+$endmodel
+$net
+$endnet
+$param
+$endparam

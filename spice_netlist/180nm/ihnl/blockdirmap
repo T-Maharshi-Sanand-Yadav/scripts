@@ -1,0 +1,5 @@
+CADENCE IHNL11143
+
+nor_gate nor schematic cds0
+inverter inverter schematic cds1
+or_gate or schematic cds2

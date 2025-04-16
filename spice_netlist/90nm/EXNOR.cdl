@@ -1,0 +1,66 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  xnor_gate
+* Top Cell Name: xnor
+* View Name:     schematic
+* Netlisted on:  Mar  1 23:58:16 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: invert
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv a gnd vdd y
+*.PININFO a:I y:O gnd:B vdd:B
+MNM0 y a gnd gnd nmos1v m=1 l=100n w=120n
+MPM0 y a vdd vdd pmos1v m=1 l=100n w=360n
+.ENDS
+
+************************************************************************
+* Library Name: exor_gate
+* Cell Name:    exor
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT exor a b gnd vdd y
+*.PININFO a:I b:I y:O gnd:B vdd:B
+MPM3 y b net16 vdd pmos1v m=1 l=100n w=120n
+MPM2 net16 abar vdd vdd pmos1v m=1 l=100n w=120n
+MPM1 net018 a vdd vdd pmos1v m=1 l=100n w=120n
+MPM0 y bbar net018 vdd pmos1v m=1 l=100n w=120n
+MNM0 y a net20 gnd nmos1v m=1 l=100n w=120n
+MNM1 net20 b gnd gnd nmos1v m=1 l=100n w=120n
+MNM3 net19 bbar gnd gnd nmos1v m=1 l=100n w=120n
+MNM2 y abar net19 gnd nmos1v m=1 l=100n w=120n
+XI18 a gnd vdd abar / inv
+XI19 b gnd vdd bbar / inv
+.ENDS
+
+************************************************************************
+* Library Name: xnor_gate
+* Cell Name:    xnor
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT xnor a b gnd vdd y
+*.PININFO a:I b:I y:O gnd:B vdd:B
+XI4 a b gnd vdd net023 / exor
+XI5 net023 gnd vdd y / inv
+.ENDS
+

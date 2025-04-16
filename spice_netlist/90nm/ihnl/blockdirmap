@@ -1,0 +1,5 @@
+CADENCE IHNL11143
+
+invert inv schematic cds0
+exor_gate exor schematic cds1
+xnor_gate xnor schematic cds2

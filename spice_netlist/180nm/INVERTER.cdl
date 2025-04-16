@@ -1,0 +1,34 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  inverter
+* Top Cell Name: inverter
+* View Name:     schematic
+* Netlisted on:  Mar  1 23:45:32 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: inverter
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+simulator lang=spice
+.SUBCKT inverter A GND VDD Y
+*.PININFO A:I Y:O GND:B VDD:B
+MNM0 Y A GND GND nmos W=2u L=180n M=1
+MPM0 Y A VDD VDD pmos W=2u L=180n M=1
+.ENDS
+

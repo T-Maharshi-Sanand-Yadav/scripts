@@ -1,0 +1,66 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  exnor_gate
+* Top Cell Name: exnor
+* View Name:     schematic
+* Netlisted on:  Mar  2 02:30:52 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: inverter
+* Cell Name:    inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inverter A GND VDD Y
+*.PININFO A:I Y:O GND:B VDD:B
+MNM0 Y A GND GND g45n1svt m=1 l=45n w=120n
+MPM0 Y A VDD VDD g45p1svt m=1 l=45n w=120n
+.ENDS
+
+************************************************************************
+* Library Name: exor_gate
+* Cell Name:    exor
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT exor a b gnd vdd Y
+*.PININFO a:I b:I Y:O gnd:B vdd:B
+MNM3 Y abar net24 gnd g45n1svt m=1 l=45n w=120n
+MNM2 net24 bbar gnd gnd g45n1svt m=1 l=45n w=120n
+MNM1 net25 b gnd gnd g45n1svt m=1 l=45n w=120n
+MNM0 Y a net25 gnd g45n1svt m=1 l=45n w=120n
+MPM3 net22 abar vdd vdd g45p1svt m=1 l=45n w=120n
+MPM2 Y b net22 vdd g45p1svt m=1 l=45n w=120n
+MPM1 net23 a vdd vdd g45p1svt m=1 l=45n w=120n
+MPM0 Y bbar net23 vdd g45p1svt m=1 l=45n w=120n
+XI1 b gnd vdd bbar / inverter
+XI0 a gnd vdd abar / inverter
+.ENDS
+
+************************************************************************
+* Library Name: exnor_gate
+* Cell Name:    exnor
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT exnor A B GND VDD Y
+*.PININFO A:I B:I Y:O GND:B VDD:B
+XI0 A B GND VDD net14 / exor
+XI1 net14 GND VDD Y / inverter
+.ENDS
+

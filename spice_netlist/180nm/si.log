@@ -1,0 +1,96 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.03s.
+*INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("Schematics XL") was used to run Schematics L.
+*WARNING* LIB avTech from File /home/vvtrainee5/cds.lib Line 21 redefines
+LIB avTech from the same file (defined earlier.)
+*WARNING* '/home/vvtrainee5/cds.lib', Line 34, Repeat of INCLUDE of '/tools/cadence/FOUNDRY/cds.lib'.
+*WARNING* LIB sample from File /tools/cadence/FOUNDRY/cds.lib Line 9 redefines
+LIB sample from the same file (defined earlier.)
+*WARNING* LIB connectLib from File /tools/cadence/FOUNDRY/cds.lib Line 10 redefines
+LIB connectLib from the same file (defined earlier.)
+*WARNING* LIB gpdk045 from File /tools/cadence/FOUNDRY/cds.lib Line 15 redefines
+LIB gpdk045 from the same file (defined earlier.)
+*WARNING* LIB gpdk090 from File /tools/cadence/FOUNDRY/cds.lib Line 16 redefines
+LIB gpdk090 from the same file (defined earlier.)
+*WARNING* LIB gpdk180 from File /tools/cadence/FOUNDRY/cds.lib Line 17 redefines
+LIB gpdk180 from the same file (defined earlier.)
+*WARNING* LIB rfLib_new from File /tools/cadence/FOUNDRY/cds.lib Line 19 redefines
+LIB rfLib_new from the same file (defined earlier.)
+*WARNING* ddUpdateLibList: Cannot read file '/tools/cadence/FOUNDRY/digital/90nm/dig/techFile'.
+*WARNING* '/home/vvtrainee5/cds.lib', Line 35: Cannot read file '/tools/cadence/FOUNDRY/digital/90nm/dig/techFile'.
+*WARNING* ddUpdateLibList: reading /tools/cadence/FOUNDRY/digital/90nm/dig asked for 148 got -1.
+*WARNING* ddUpdateLibList: reading /tools/cadence/FOUNDRY/digital/90nm/dig: Success.
+*WARNING* '/tools/cadence/FOUNDRY/digital/90nm/dig', Line 1: Skipping: 'H' Ø Î ­> 
+*WARNING* LIB avTech from File /home/vvtrainee5/cds.lib Line 43 redefines
+LIB avTech from the same file (defined earlier.)
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 55 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 56 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 57 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* '/home/vvtrainee5/cds.lib', Line 59: path /home/vvtrainee6/Practice_schematics already belongs to LIB rohit07.
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 60 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* The directory: '/home/install/FOUNDRY/rfLib_new' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'rfLib_new'.
+*WARNING* The directory: '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'gpdk045'.
+*WARNING* The directory: '/tools/cadence/IC618/tools/dfII/samples/cdslib/sample' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'sample'.
+*WARNING* LIB avTech from File /home/vvtrainee5/cds.lib Line 21 redefines
+LIB avTech from the same file (defined earlier.)
+*WARNING* '/home/vvtrainee5/cds.lib', Line 34, Repeat of INCLUDE of '/tools/cadence/FOUNDRY/cds.lib'.
+*WARNING* LIB sample from File /tools/cadence/FOUNDRY/cds.lib Line 9 redefines
+LIB sample from the same file (defined earlier.)
+*WARNING* LIB connectLib from File /tools/cadence/FOUNDRY/cds.lib Line 10 redefines
+LIB connectLib from the same file (defined earlier.)
+*WARNING* LIB gpdk045 from File /tools/cadence/FOUNDRY/cds.lib Line 15 redefines
+LIB gpdk045 from the same file (defined earlier.)
+*WARNING* LIB gpdk090 from File /tools/cadence/FOUNDRY/cds.lib Line 16 redefines
+LIB gpdk090 from the same file (defined earlier.)
+*WARNING* LIB gpdk180 from File /tools/cadence/FOUNDRY/cds.lib Line 17 redefines
+LIB gpdk180 from the same file (defined earlier.)
+*WARNING* LIB rfLib_new from File /tools/cadence/FOUNDRY/cds.lib Line 19 redefines
+LIB rfLib_new from the same file (defined earlier.)
+*WARNING* ddUpdateLibList: Cannot read file '/tools/cadence/FOUNDRY/digital/90nm/dig/techFile'.
+*WARNING* '/home/vvtrainee5/cds.lib', Line 35: Cannot read file '/tools/cadence/FOUNDRY/digital/90nm/dig/techFile'.
+*WARNING* ddUpdateLibList: reading /tools/cadence/FOUNDRY/digital/90nm/dig asked for 148 got -1.
+*WARNING* ddUpdateLibList: reading /tools/cadence/FOUNDRY/digital/90nm/dig: Success.
+*WARNING* '/tools/cadence/FOUNDRY/digital/90nm/dig', Line 1: Skipping: 'H' Ø Î ­> 
+*WARNING* LIB avTech from File /home/vvtrainee5/cds.lib Line 43 redefines
+LIB avTech from the same file (defined earlier.)
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 55 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 56 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 57 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* '/home/vvtrainee5/cds.lib', Line 59: path /home/vvtrainee6/Practice_schematics already belongs to LIB rohit07.
+*WARNING* LIB rohit07 from File /home/vvtrainee5/cds.lib Line 60 redefines
+LIB rohit07 from the same file (defined earlier.)
+*WARNING* The directory: '/home/install/FOUNDRY/rfLib_new' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'rfLib_new'.
+*WARNING* The directory: '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'gpdk045'.
+*WARNING* The directory: '/tools/cadence/IC618/tools/dfII/samples/cdslib/sample' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'sample'.
+Running Artist Hierarchical Netlisting ...
+Loading gpdk180/libInit.il ...
+	Loading gpdk180/loadCxt.ile ... done!
+	Loading context 'gpdk180' from library 'gpdk180' ... done!
+	Loading context 'pdkUtils' from library 'gpdk180' ... done!
+	Loading gpdk180/.cdsenv ... done!
+	Loading gpdk180/libInitCustomExit.il ... 
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 180nm PDK                      *           
+  *                        (gpdk180)                          *           
+  *                                                           *           
+  *                       Version 3.2                         *           
+  *                                                           *           
+  *************************************************************           
+done!
+Loaded gpdk180/libInit.il successfully!
+Loading cdf.cxt 
+End netlisting Mar  1 23:49:45 2023

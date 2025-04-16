@@ -1,0 +1,18 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "or"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/vvtrainee5/netlist/180nm"
+ )
+( model
+( "nor_gate/nor/schematic" "nor" )
+( "inverter/inverter/schematic" "inverter" )
+( "or_gate/or/schematic" "or" )
+ )
+( "inverter" "ihnl/cds1/map" )
+( "nor" "ihnl/cds0/map" )
+( "or" "ihnl/cds2/map" )
+ )
