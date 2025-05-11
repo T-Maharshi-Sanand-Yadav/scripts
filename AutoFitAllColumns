@@ -1,3 +1,99 @@
+Here's how you can use the `AutoFitAllColumns` macro in Excel:
+
+---
+
+### ✅ **Steps to Use the Macro**
+
+#### 🔹 **Step 1: Open Excel**
+
+Open the Excel workbook where you want to apply this macro. It can be an existing file or a new one.
+
+---
+
+#### 🔹 **Step 2: Open the VBA Editor**
+
+1. Press `Alt + F11` — this opens the **Visual Basic for Applications (VBA) Editor**.
+2. In the left panel (Project Explorer), find **`ThisWorkbook`** or any worksheet module under `VBAProject (YourWorkbookName)`.
+
+---
+
+#### 🔹 **Step 3: Insert a New Module**
+
+1. In the VBA editor, go to `Insert > Module`.
+2. A new module will appear named `Module1`.
+
+---
+
+#### 🔹 **Step 4: Paste the Macro Code**
+
+Paste the following code into the module:
+
+```vba
+Sub AutoFitAllColumns()
+    Dim ws As Worksheet
+    Dim LastRow As Long
+    Dim LastCol As Long
+    
+    For Each ws In ThisWorkbook.Sheets
+        With ws
+            ' Determine the last row and column with data
+            LastRow = .Cells(.Rows.Count, 1).End(xlUp).Row
+            LastCol = .Cells(1, .Columns.Count).End(xlToLeft).Column
+            
+            ' AutoFit all columns with data
+            .Range(.Cells(1, 1), .Cells(LastRow, LastCol)).Columns.AutoFit
+            
+            ' Log the sheet name and last formed rows and columns
+            Debug.Print "Adjusted: " & .Name & " LastRow: " & LastRow & " LastCol: " & LastCol
+        End With
+    Next ws
+End Sub
+```
+
+---
+
+#### 🔹 **Step 5: Run the Macro**
+
+1. Close the VBA editor (`Alt + Q` or click the close button).
+2. Back in Excel, press `Alt + F8` to open the **Macro dialog**.
+3. Select `AutoFitAllColumns` and click **Run**.
+
+---
+
+### 🔒 **Important: Save as Macro-Enabled Workbook**
+
+Go to `File > Save As`
+Choose **Excel Macro-Enabled Workbook (\*.xlsm)** — this ensures the macro is saved.
+
+---
+
+Would you like a version that also autofits **rows** or detects columns based on actual data range?
+🔧 Updated VBA Macro: AutoFit Rows and Columns
+Sub AutoFitAllRowsAndColumns()
+    Dim ws As Worksheet
+    Dim UsedRange As Range
+
+    For Each ws In ThisWorkbook.Sheets
+        With ws
+            ' Skip if sheet is completely blank
+            If Application.WorksheetFunction.CountA(.Cells) > 0 Then
+                Set UsedRange = .UsedRange
+                UsedRange.Columns.AutoFit
+                UsedRange.Rows.AutoFit
+
+                Debug.Print "Adjusted: " & .Name & _
+                            " UsedRange: " & UsedRange.Address
+            Else
+                Debug.Print "Skipped blank sheet: " & .Name
+            End If
+        End With
+    Next ws
+End Sub
+
+
+
+
+🔧 Updated VBA Macro: AutoFit Only Columns
 Sub AutoFitAllColumns()
     Dim ws As Worksheet
     Dim LastRow As Long
