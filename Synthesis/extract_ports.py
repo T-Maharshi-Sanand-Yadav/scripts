@@ -8,30 +8,46 @@ port_regex = re.compile(
     r'\b(input|output|inout)\b\s*'
     r'(?:wire|reg)?\s*'
     r'(\[[^\]]+\])?\s*'
-    r'([a-zA-Z_][a-zA-Z0-9_]*)'
+    r'([^;]+)'
 )
 
 def extract_ports(verilog_file):
-    inputs, outputs, inouts = [], [], []
+
+    inputs = []
+    outputs = []
+    inouts = []
 
     with open(verilog_file, "r") as f:
+
         for line in f:
+
             line = line.strip()
 
             if not line or line.startswith("//"):
                 continue
 
-            m = port_regex.search(line)
-            if m:
-                direction, width, name = m.groups()
+            match = port_regex.search(line)
+
+            if match:
+
+                direction, width, names = match.groups()
+
                 width = width if width else "[0:0]"
 
-                if direction == "input":
-                    inputs.append(f"{name} {width}")
-                elif direction == "output":
-                    outputs.append(f"{name} {width}")
-                else:
-                    inouts.append(f"{name} {width}")
+                ports = [p.strip() for p in names.split(",")]
+
+                for name in ports:
+
+                    name = name.replace(";", "").strip()
+
+                    if direction == "input":
+                        inputs.append(f"{name} {width}")
+
+                    elif direction == "output":
+                        outputs.append(f"{name} {width}")
+
+                    else:
+                        inouts.append(f"{name} {width}")
 
     return inputs, outputs, inouts
 
@@ -65,11 +81,14 @@ def main():
         print(" ", o)
 
     print("\nInouts:")
-    print(" ", "None" if not inouts else inouts)
+    if not inouts:
+        print("  None")
+    else:
+        for io in inouts:
+            print(" ", io)
 
     print("\n=================================\n")
 
 
 if __name__ == "__main__":
     main()
-
