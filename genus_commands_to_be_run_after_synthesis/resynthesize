@@ -1,0 +1,16 @@
+set_db syn_generic_effort express
+set_db syn_map_effort express
+set_db syn_opt_effort express
+
+syn_generic
+syn_map
+syn_opt
+
+
+set_db syn_generic_effort high
+set_db syn_map_effort high
+set_db syn_opt_effort high
+
+syn_generic -physical
+syn_map -physical
+syn_opt -physical -incremental
